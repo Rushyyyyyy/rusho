@@ -1,0 +1,28 @@
+const discord = require("discord.js");
+const database = require('quick.db');
+const db = require('quick.db');
+const {EmbedBuilder} = require("discord.js");
+
+exports.run = async (client, message, args) => {
+  if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send('Yetkin Yok Dostum!')
+
+    const embed = new EmbedBuilder()
+    .setTitle("")    //Başlık
+    .setDescription("")    //Açıklama
+    .setFooter("")    //Son Açıklama
+    .setTimestamp()    //Saat
+    .setURL("")    //Link
+    .setThumbnail("")    //Sağ Üste Resim
+    .setColor("")    //Renk
+   .setImage("")    //Gömülü Resim 
+    return message.channel.send({embeds : [embed]});
+
+};
+exports.conf = {
+  aliases: []
+};
+
+exports.help = {
+  name: ""
+};
+
